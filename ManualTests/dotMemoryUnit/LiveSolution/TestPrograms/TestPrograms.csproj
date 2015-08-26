@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF79CF42-35FF-4576-A131-C8C74DF045A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestPrograms</RootNamespace>
+    <AssemblyName>TestPrograms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PROFILE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dotMemory.Unit">
+      <HintPath>..\..\..\..\..\..\Packages\JetBrains.dotMemoryUnit.2.0.20150819.165728\Lib\dotMemory.Unit.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Profiler.Windows.Api">
+      <HintPath>..\lib\JetBrains.Profiler.Windows.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\AssemblyPropertyTestProgram.cs">
+      <Link>AssemblyPropertyTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\dmuRetainedObjectSet.cs">
+      <Link>dmuRetainedObjectSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\dmuSaveWorkspace.cs">
+      <Link>dmuSaveWorkspace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\dmuTestProgram.cs">
+      <Link>dmuTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\DotMemoryUnitServerTestProgram.cs">
+      <Link>DotMemoryUnitServerTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\GenerationPropertyTestProgram.cs">
+      <Link>GenerationPropertyTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\GetDifferenceTestProgram.cs">
+      <Link>GetDifferenceTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\InterfacePropertyTestProgram.cs">
+      <Link>InterfacePropertyTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\NamespacePropertyTestProgram.cs">
+      <Link>NamespacePropertyTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TestProgramBase.cs">
+      <Link>TestProgramBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TrafficTestProgram.cs">
+      <Link>TrafficTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TypePropertyTestProgram.cs">
+      <Link>TypePropertyTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\ProfilingApi.cs">
+      <Link>ProfilingApi.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

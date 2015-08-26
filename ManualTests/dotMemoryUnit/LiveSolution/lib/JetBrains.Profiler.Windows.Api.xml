@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Profiler.Windows.Api</name>
+    </assembly>
+    <members>
+        <member name="F:JetBrains.Profiler.Windows.Api.Impl.StateUtil.ourEventName">
+            <summary>
+              Note: Same name must be in BaseProfiler.cpp!!!
+            </summary>
+        </member>
+        <member name="F:JetBrains.Profiler.Windows.Api.ApiState.None">
+            <summary>
+              No profiler in the current process
+            </summary>
+        </member>
+        <member name="F:JetBrains.Profiler.Windows.Api.ApiState.Inactive">
+            <summary>
+              Profiler is in the current process. No profiler control is possible at this moment.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Profiler.Windows.Api.ApiState.Active">
+            <summary>
+              Profiler is in the current process. Profiler can be controlled by API or manually.
+            </summary>
+        </member>
+    </members>
+</doc>

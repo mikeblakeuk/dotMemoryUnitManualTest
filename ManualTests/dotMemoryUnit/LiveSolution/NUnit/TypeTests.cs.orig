@@ -1,0 +1,30 @@
+﻿using JetBrains.dotMemoryUnit;
+using JetBrains.dotMemoryUnit.Properties;
+using NUnit.Framework;
+
+namespace NUnit
+{
+  [TestFixture]
+  public class TypeTests
+  {
+    [Test]
+    public void IsTest()
+    {
+      Generic.TypeTests.IsTest(Assert.True);
+
+        if (dotMemory.IsEnabled)
+        {
+            var snapshot = dotMemory.GetSnapshot();
+
+            var sizeInBytes = snapshot.SizeInBytes;
+            var objectsCount = snapshot.ObjectsCount;
+
+            ObjectSet os;
+            snapshot
+                .GetObjects(where => where.LeakedOnEventHandler())
+                .GetExclusiveRetainedObjects()
+                .;
+        }
+    }
+  }
+}

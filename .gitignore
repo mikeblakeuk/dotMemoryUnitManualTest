@@ -1,0 +1,13 @@
+*.user
+*.suo
+/.idea
+/Lib/
+/Data/Allocations/
+/Data/IntegrationTests.UI/VsTest/
+/Data/Model/
+/Data/TestSnapshotData/Very Small/
+/Data/IntegrationTests/Dal/
+/Data/IntegrationTests/Programs/dotMemory/
+/ManualTests/dotMemoryUnit/LiveSolution/_ReSharper.Caches/
+/ManualTests/dotMemoryUnit/LiveSolution/*/bin/
+/ManualTests/dotMemoryUnit/LiveSolution/*/obj/
