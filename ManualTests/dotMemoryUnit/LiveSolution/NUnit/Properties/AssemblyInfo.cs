@@ -1,3 +1,3 @@
-﻿//using JetBrains.dotMemoryUnit;
+﻿using JetBrains.dotMemoryUnit;
 
-//[assembly:EnableDotMemoryUnitSupport]
+[assembly:DotMemoryUnit(DiskSpaceLimit = long.MaxValue, WorkspaceNumberLimit = int.MaxValue)]
