@@ -1,8 +1,4 @@
-﻿using JetBrains.dotMemoryUnit;
-using NUnit.Framework;
-
-[assembly: EnableDotMemoryUnitSupport]
-[assembly: DotMemoryUnit(FailIfRunWithoutSupport = false)]
+﻿using NUnit.Framework;
 
 namespace NUnit
 {
