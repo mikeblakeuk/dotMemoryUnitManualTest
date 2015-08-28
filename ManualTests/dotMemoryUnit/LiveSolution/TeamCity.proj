@@ -2,13 +2,13 @@
 <Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
-    <Projects Include="Generic.csproj" />
-    <Projects Include="Support.csproj" />
-    <Projects Include="TestPrograms.csproj" />
-    <Projects Include="nUnit.csproj" />
-    <Projects Include="xUnit.csproj" />
-    <Projects Include="mSpec.csproj" />
-    <Projects Include="csUnit.csproj" />
+    <Projects Include="Generic\Generic.csproj" />
+    <Projects Include="Support\Support.csproj" />
+    <Projects Include="TestPrograms\TestPrograms.csproj" />
+    <Projects Include="nUnit\nUnit.csproj" />
+    <Projects Include="xUnit\xUnit.csproj" />
+    <Projects Include="mSpec\mSpec.csproj" />
+    <Projects Include="csUnit\csUnit.csproj" />
   </ItemGroup>
 
   <Target Name="Build">
