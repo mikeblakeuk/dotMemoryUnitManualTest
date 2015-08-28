@@ -1,6 +1,6 @@
 *.user
 *.suo
-/.idea
+/.idea/
 /Lib/
 /Data/Allocations/
 /Data/IntegrationTests.UI/VsTest/

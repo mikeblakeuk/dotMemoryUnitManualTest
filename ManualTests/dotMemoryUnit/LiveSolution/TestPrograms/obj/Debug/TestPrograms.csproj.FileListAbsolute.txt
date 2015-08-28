@@ -1,9 +1,0 @@
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\bin\Debug\TestPrograms.dll
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\bin\Debug\TestPrograms.pdb
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\bin\Debug\JetBrains.Profiler.Windows.Api.dll
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\bin\Debug\JetBrains.Profiler.Windows.Api.xml
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\obj\Debug\TestPrograms.dll
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\obj\Debug\TestPrograms.pdb
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\bin\Debug\dotMemory.Unit.dll
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\bin\Debug\dotMemory.Unit.xml
-P:\dotMemory.Root 3\dotMemory\Test\ManualTests\dotMemoryUnit\LiveSolution\TestPrograms\obj\Debug\TestPrograms.csprojResolveAssemblyReference.cache
