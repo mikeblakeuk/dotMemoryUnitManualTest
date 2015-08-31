@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="dotMemory.Unit">
-      <HintPath>..\Packages\JetBrains.dotMemoryUnit.2.0.20150819.165728\Lib\dotMemory.Unit.dll</HintPath>
+      <HintPath>..\Packages\JetBrains.dotMemoryUnit.2.1.20150828.125449\Lib\dotMemory.Unit.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
