@@ -58,5 +58,12 @@ namespace NUnit
     {
       Generic.AssemblyTests.GenericTypeIstest(Assert.True);
     }
+
+    [Test]
+    public void FailTest()
+    {
+      Generic.AssemblyTests.FailTest(Assert.True);
+    }
+
   }
 }

@@ -6,6 +6,7 @@ namespace Generic
 {
   public static class AssemblyTests
   {
+
     private static IEnumerable<string> GetLikePatterns()
     {
       var fullName = typeof(AssemblyPropertyTestProgram).Assembly.FullName;
@@ -35,7 +36,9 @@ namespace Generic
             assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
           }
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void IsTest(Action<bool, string> assertTrue)
@@ -49,7 +52,9 @@ namespace Generic
            string.Format(AssertTemplates.AssertObjectsCountTemplate, AssemblyPropertyTestProgram.Local.Count + 1, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void NotLikeTest(Action<bool, string> assertTrue)
@@ -69,7 +74,9 @@ namespace Generic
             assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
           }
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void IsNotTest(Action<bool, string> assertTrue)
@@ -84,7 +91,9 @@ namespace Generic
            string.Format(AssertTemplates.AssertObjectsCountTemplate, totalObjects - AssemblyPropertyTestProgram.Local.Count - 1, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void IsNotByExclusionTest(Action<bool, string> assertTrue)
@@ -101,7 +110,9 @@ namespace Generic
           assertTrue(isNotObjectSet.SizeInBytes == memory.SizeInBytes - isObjectSet.SizeInBytes,
             string.Format(AssertTemplates.AssertExactTotalSizeTemplate, memory.SizeInBytes - isObjectSet.SizeInBytes, isNotObjectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void ArrayTest(Action<bool, string> assertTrue)
@@ -116,7 +127,9 @@ namespace Generic
            string.Format(AssertTemplates.AssertObjectsCountTemplate, 1, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void ArrayNotInMscorlibTest(Action<bool, string> assertTrue)
@@ -131,7 +144,9 @@ namespace Generic
            string.Format(AssertTemplates.AssertObjectsCountTemplate, 0, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes == 0, string.Format(AssertTemplates.AssertExactTotalSizeTemplate, 0, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void EmptyIntersectionTest(Action<bool, string> assertTrue)
@@ -146,7 +161,9 @@ namespace Generic
            string.Format(AssertTemplates.AssertObjectsCountTemplate, 0, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes == 0, string.Format(AssertTemplates.AssertExactTotalSizeTemplate, 0, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void GenericTypeIstest(Action<bool, string> assertTrue)
@@ -162,5 +179,22 @@ namespace Generic
         });
       });
     }
+
+    public static void FailTest(Action<bool, string> assertTrue)
+    {
+      AssemblyPropertyTestProgram.Execute(() =>
+      {
+        dotMemory.Check(memory =>
+        {
+          var objectSet = memory.GetObjects(_ => _.Assembly.Is(typeof(AssemblyPropertyTestProgram).Assembly));
+          assertTrue(objectSet.ObjectsCount == AssemblyPropertyTestProgram.Local.Count,
+           string.Format(AssertTemplates.AssertObjectsCountTemplate, AssemblyPropertyTestProgram.Local.Count, objectSet.ObjectsCount));
+          assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
+        });
+      },
+      () => { }
+      );
+    }
+
   }
 }

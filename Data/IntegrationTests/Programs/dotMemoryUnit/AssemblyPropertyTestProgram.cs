@@ -8,22 +8,22 @@ public class AssemblyPropertyTestProgram : TestProgramBase
   {
     ProfilingApi.AssertProfilerIsConnected();
     ProfilingApi.EnableAllocations();
-    Execute(() => ProfilingApi.GetSnapshot());
+    Execute(() => ProfilingApi.GetSnapshot(), () => ProfilingApi.GetSnapshot());
   }
 
-  public static void Execute(Action getSnapshot)
+  public static void Execute(Action getSnapshot0, Action getSnapshot1)
   {
     Create<Local>(Local.Count);
 
     var local = Create<Local>(Local.Count);
 
-    getSnapshot();
+    getSnapshot0();
 
     Create<Local>(Local.Count);
 
     var local1 = Create<Local>(Local.Count);
-    var sysObj = new object(); 
-    getSnapshot();
+    var sysObj = new object();
+    getSnapshot1();
 
     GC.KeepAlive(local);
     GC.KeepAlive(local1);
@@ -34,5 +34,5 @@ public class AssemblyPropertyTestProgram : TestProgramBase
   {
     public const int Count = 37;
   }
-  
+
 }

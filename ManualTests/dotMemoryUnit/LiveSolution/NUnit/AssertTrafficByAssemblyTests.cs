@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 
-#if DEV
 namespace NUnit
 {
   [TestFixture]
@@ -67,4 +66,3 @@ namespace NUnit
     }
   }
 }
-#endif

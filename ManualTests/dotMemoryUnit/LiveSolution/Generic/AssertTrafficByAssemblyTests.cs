@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using JetBrains.dotMemoryUnit;
 using JetBrains.dotMemoryUnit.Kernel;
 
-#if DEV
 namespace Generic
 {
   public class AssertTrafficByAssemblyTests : TestProgramBase
@@ -284,4 +283,3 @@ namespace Generic
     public const int Count = 3;
   }
 }
-#endif

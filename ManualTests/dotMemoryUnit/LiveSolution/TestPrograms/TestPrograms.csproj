@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestPrograms</RootNamespace>
     <AssemblyName>TestPrograms</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -79,6 +80,9 @@
     </Compile>
     <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TypePropertyTestProgram.cs">
       <Link>TypePropertyTestProgram.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TestDynamicAssemblyPprogram.cs">      
+      <Link>TestDynamicAssemblyPprogram.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\ProfilingApi.cs">
       <Link>ProfilingApi.cs</Link>
