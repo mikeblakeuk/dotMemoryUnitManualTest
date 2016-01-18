@@ -24,7 +24,12 @@ public class TrafficAssemblyPropertyTestProgram : TestProgramBase
 
     getSnapshot();
 
+    var local1 = new LocalTraffic();
+
+    getSnapshot();
+
     GC.KeepAlive(local);
+    GC.KeepAlive(local1);
   }
 
   public class LocalTraffic

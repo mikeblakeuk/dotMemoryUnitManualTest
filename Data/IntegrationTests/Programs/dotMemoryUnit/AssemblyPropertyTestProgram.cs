@@ -22,7 +22,7 @@ public class AssemblyPropertyTestProgram : TestProgramBase
     Create<Local>(Local.Count);
 
     var local1 = Create<Local>(Local.Count);
-    var sysObj = new object();
+    var sysObj = new object(); 
     getSnapshot1();
 
     GC.KeepAlive(local);
@@ -34,5 +34,5 @@ public class AssemblyPropertyTestProgram : TestProgramBase
   {
     public const int Count = 37;
   }
-
+  
 }

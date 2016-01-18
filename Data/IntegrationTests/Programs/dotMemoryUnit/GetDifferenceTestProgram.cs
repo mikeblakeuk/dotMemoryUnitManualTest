@@ -13,13 +13,22 @@ public class GetDifferenceTestProgram : TestProgramBase
   public static void Execute(Action getSnapshot1, Action getSnapshot2)
   {
     var class1Array = Create<FirstClass>(FirstClass.Count);
+
     getSnapshot1();
 
     var class2Array = Create<SecondClass>(SecondClass.Count);
+
     getSnapshot2();
 
-    GC.KeepAlive(class1Array);
-    GC.KeepAlive(class2Array);
+    for (int i = 0; i < (class1Array.Length); i++)
+    {
+      GC.KeepAlive(class1Array[i]);
+    }
+
+    for (int i = 0; i < (class2Array.Length); i++)
+    {
+      GC.KeepAlive(class2Array[i]);
+    }
   }
 }
 

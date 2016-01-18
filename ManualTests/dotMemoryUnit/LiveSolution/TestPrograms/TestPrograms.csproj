@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="dotMemory.Unit">
-      <HintPath>..\Packages\JetBrains.dotMemoryUnit.2.1.20150828.125449\Lib\dotMemory.Unit.dll</HintPath>
+    <Reference Include="dotMemory.Unit, Version=103.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.dotMemoryUnit.2.1.20150828.125449\Lib\dotMemory.Unit.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="JetBrains.Profiler.Windows.Api">
       <HintPath>..\lib\JetBrains.Profiler.Windows.Api.dll</HintPath>
@@ -72,6 +73,9 @@
     <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\NamespacePropertyTestProgram.cs">
       <Link>NamespacePropertyTestProgram.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TestDynamicAssemblyPprogram.cs">
+      <Link>TestDynamicAssemblyPprogram.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TestProgramBase.cs">
       <Link>TestProgramBase.cs</Link>
     </Compile>
@@ -80,9 +84,6 @@
     </Compile>
     <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TypePropertyTestProgram.cs">
       <Link>TypePropertyTestProgram.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TestDynamicAssemblyPprogram.cs">      
-      <Link>TestDynamicAssemblyPprogram.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\ProfilingApi.cs">
       <Link>ProfilingApi.cs</Link>
