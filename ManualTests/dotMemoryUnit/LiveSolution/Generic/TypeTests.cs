@@ -1,5 +1,6 @@
 ﻿using System;
 using JetBrains.dotMemoryUnit;
+using JetBrains.dotMemoryUnit.TestPrograms;
 
 namespace Generic
 {
@@ -20,7 +21,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void ArrayTest(Action<bool, string> assertTrue)
@@ -37,7 +40,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void GenericArrayTest(Action<bool, string> assertTrue)
@@ -54,7 +59,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void TypeIsTest(Action<bool, string> assertTrue)
@@ -71,7 +78,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void TypeIsListTest(Action<bool, string> assertTrue)
@@ -89,7 +98,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void TypeIsNotTest(Action<bool, string> assertTrue)
@@ -107,7 +118,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void TypeIsNotListTest(Action<bool, string> assertTrue)
@@ -126,7 +139,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
   }
 }

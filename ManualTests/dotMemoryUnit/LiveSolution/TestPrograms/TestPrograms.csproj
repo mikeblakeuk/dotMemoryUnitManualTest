@@ -73,8 +73,8 @@
     <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\NamespacePropertyTestProgram.cs">
       <Link>NamespacePropertyTestProgram.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TestDynamicAssemblyPprogram.cs">
-      <Link>TestDynamicAssemblyPprogram.cs</Link>
+    <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TestDynamicAssemblyProgram.cs">
+      <Link>TestDynamicAssemblyProgram.cs</Link>
     </Compile>
     <Compile Include="..\..\..\..\Data\IntegrationTests\Programs\dotMemoryUnit\TestProgramBase.cs">
       <Link>TestProgramBase.cs</Link>

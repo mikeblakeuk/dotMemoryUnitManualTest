@@ -16,10 +16,10 @@ namespace JetBrains.dotMemoryUnit.TestPrograms
     {
       ProfilingApi.AssertProfilerIsConnected();
       ProfilingApi.EnableAllocations();
-      Execute(() => ProfilingApi.GetSnapshot());
+      Execute(() => ProfilingApi.GetSnapshot(), () => ProfilingApi.GetSnapshot());
     }
 
-    public static void Execute(Action getSnapshot)
+    public static void Execute(Action getSnapshot0, Action getSnapshot1)
     {
       Create<One>(One.Count);
       Create<Two>(Two.Count);
@@ -33,7 +33,7 @@ namespace JetBrains.dotMemoryUnit.TestPrograms
         Create<GenericArray>(GenericArray.Count)
       };
 
-      getSnapshot();
+      getSnapshot0();
 
       // for traffic test
       keepAlive.AddRange(new object[]
@@ -51,7 +51,7 @@ namespace JetBrains.dotMemoryUnit.TestPrograms
       Create<Array>(Array.Count * Collected);
       Create<GenericArray>(GenericArray.Count * Collected);
 
-      getSnapshot();
+      getSnapshot1();
 
       GC.KeepAlive(keepAlive);
     }

@@ -12,7 +12,7 @@ namespace Framework35Tests
     [Test]
     public static void DynamicAssembly()
     {
-      DynamicAssemblyPprogram.Execute(() =>
+      DynamicAssemblyProgram.Execute(() =>
       {
         dotMemory.Check(memory =>
         {

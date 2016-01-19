@@ -1,5 +1,6 @@
 ﻿using System;
 using JetBrains.dotMemoryUnit;
+using JetBrains.dotMemoryUnit.TestPrograms;
 
 namespace Generic
 {
@@ -18,7 +19,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void IsNotTest(Action<bool, string> assertTrue)
@@ -34,7 +37,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void IsNotTestWithFail(Action<bool, string> assertTrue)
@@ -50,7 +55,9 @@ namespace Generic
 
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void MultiInheritanceInterfaceIsTest(Action<bool, string> assertTrue)
@@ -65,7 +72,9 @@ namespace Generic
           assertTrue(objectSet.ObjectsCount == expectedCount, string.Format(AssertTemplates.AssertObjectsCountTemplate, expectedCount, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void IsListTest(Action<bool, string> assertTrue)
@@ -79,7 +88,9 @@ namespace Generic
           assertTrue(objectSet.ObjectsCount == expectedCount, string.Format(AssertTemplates.AssertObjectsCountTemplate, expectedCount, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void IsNotListTest(Action<bool, string> assertTrue)
@@ -93,7 +104,9 @@ namespace Generic
           assertTrue(objectSet.ObjectsCount == expectedCount, string.Format(AssertTemplates.AssertObjectsCountTemplate, expectedCount, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void KollectionTest(Type type, Action<bool, string> assertTrue)
@@ -107,7 +120,9 @@ namespace Generic
           assertTrue(objectSet.ObjectsCount == expectedCount, string.Format(AssertTemplates.AssertObjectsCountTemplate, expectedCount, objectSet.ObjectsCount));
           assertTrue(objectSet.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, objectSet.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
   }
 }

@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace TestPrograms
 {
-  public class DynamicAssemblyPprogram
+  public class DynamicAssemblyProgram
   {
     public static void Execute(Action getSnapshot)
     {

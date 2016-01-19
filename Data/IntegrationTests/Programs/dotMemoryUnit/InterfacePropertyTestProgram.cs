@@ -14,21 +14,21 @@ namespace JetBrains.dotMemoryUnit.TestPrograms
       ProfilingApi.AssertProfilerIsConnected();
       ProfilingApi.EnableAllocations();
 
-      Execute(() => ProfilingApi.GetSnapshot());
+      Execute(() => ProfilingApi.GetSnapshot(), () => ProfilingApi.GetSnapshot());
     }
 
-    public static void Execute(Action getSnapshot)
+    public static void Execute(Action getSnapshot0, Action getSnapshot1)
     {
       var keepAlive = new List<object>(CreateObjects(1)){CreateNoise()};
 
-      getSnapshot();
+      getSnapshot0();
 
       // for traffic test
       keepAlive.AddRange(
         CreateObjects(Live));
       CreateObjects(Collected);
 
-      getSnapshot();
+      getSnapshot1();
 
       GC.KeepAlive(keepAlive);
     }

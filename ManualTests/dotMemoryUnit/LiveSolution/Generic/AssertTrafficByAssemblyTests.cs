@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using JetBrains.dotMemoryUnit;
 using JetBrains.dotMemoryUnit.Kernel;
+using JetBrains.dotMemoryUnit.TestPrograms;
 
 namespace Generic
 {
@@ -252,7 +253,9 @@ namespace Generic
            string.Format(AssertTemplates.AssertObjectsCountTemplate, TypePropertyTestProgram.Generic.Count, allocatedObjects.ObjectsCount));
           assertTrue(allocatedObjects.SizeInBytes > 0, string.Format(AssertTemplates.AssertSizeInBytesTemplate, allocatedObjects.SizeInBytes));
         });
-      });
+      },
+      () => { }
+      );
     }
 
     public static void FailTest(Action<bool, string> assertTrue)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using JetBrains.dotMemoryUnit.TestPrograms;
 using NUnit.Framework;
 
 namespace NUnit

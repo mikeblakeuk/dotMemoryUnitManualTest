@@ -1,5 +1,6 @@
 ﻿using JetBrains.dotMemoryUnit;
 using JetBrains.dotMemoryUnit.Kernel;
+using JetBrains.dotMemoryUnit.TestPrograms;
 using Machine.Specifications;
 
 namespace MSpec
@@ -14,7 +15,8 @@ namespace MSpec
     {
       DotMemoryUnitController.TestStart();
       InterfacePropertyTestProgram.Execute(
-          () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); }
+          () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); },
+          () => { }
           );
     };
 
@@ -50,7 +52,8 @@ namespace MSpec
     {
       DotMemoryUnitController.TestStart();
       InterfacePropertyTestProgram.Execute(
-        () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); }
+        () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); },
+        () => { }
         );
     };
 
@@ -86,7 +89,8 @@ namespace MSpec
     {
       DotMemoryUnitController.TestStart();
       InterfacePropertyTestProgram.Execute(
-          () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); }
+          () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); },
+          () => { }
           );
     };
 
@@ -122,7 +126,8 @@ namespace MSpec
     {
       DotMemoryUnitController.TestStart();
       InterfacePropertyTestProgram.Execute(
-          () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); }
+          () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); },
+          () => { }
           );
     };
 
@@ -158,7 +163,8 @@ namespace MSpec
     {
       DotMemoryUnitController.TestStart();
       InterfacePropertyTestProgram.Execute(
-          () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); }
+          () => { _firstSnapshot = dotMemoryApi.GetSnapshot(); },
+          () => { }
           );
     };
 
