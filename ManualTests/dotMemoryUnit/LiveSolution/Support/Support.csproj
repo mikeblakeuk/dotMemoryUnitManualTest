@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DotMemory.cs" />
+    <Compile Include="MSpec\DotMemoryCheck.cs" />
     <Compile Include="MSpec\dotMemoryUnit.cs" />
     <None Include="MSpec\Sample.cs" />
     <None Include="packages.config" />
